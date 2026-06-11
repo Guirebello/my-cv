@@ -134,7 +134,6 @@
     (
       [Docker],
       [CI/CD],
-      [GitLab],
       [Linux],
     ),
   ),
@@ -144,8 +143,6 @@
       [Git],
       [Jira],
       [DevRev],
-      [Github],
-      [Gitlab],
     ),
   ),
   (
