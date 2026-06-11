@@ -1,0 +1,4 @@
+# Typst output
+*.pdf
+
+# Typst local package cache (not needed; auto-downloaded)
