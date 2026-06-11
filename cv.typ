@@ -4,15 +4,19 @@
 #let name = "Guilherme Meira Rebello"
 #let email = "gui.rebello1@gmail.com"
 #let github = "github.com/Guirebello"
+#let gitlab = "gitlab.com/Guirebello"
 #let linkedin = "linkedin.com/in/guirebello"
+#let portfolio = "guirebello.me"
 #let contacts = (
   [#link("mailto:" + email)[#email]],
-  [#link("https://" + github)[#github]],
-  [#link("https://" + linkedin)[#linkedin]],
+  [#link("https://" + github)[GitHub]],
+  [#link("https://" + gitlab)[GitLab]],
+  [#link("https://" + linkedin)[LinkedIn]],
+  [#link("https://" + portfolio)[#portfolio]],
 )
-#let location = "Santo André, SP, Brasil"
+#let location = "Santo André, SP, Brazil"
 
-// Professional Summary
+// Professional Summary (subtitle)
 #let summary = "Software Engineer"
 
 // Resume configuration
@@ -47,12 +51,11 @@
   date: "Sep 2021 - Present",
   location: "São Caetano, SP, Brazil",
   degrees: (
-    ("Bachelor's", "Science and Technology"),
     ("Bachelor's", "Computer Science"),
+    ("Bachelor's", "Science and Technology"),
   ),
   gpa: "",
 )
-
 #edu(
   institution: "Cambridge Assessment English",
   date: "Dec 2019",
@@ -71,24 +74,26 @@
   date: "Mar 2025 - Present",
   location: "São Caetano, SP, Brazil",
   details: [
-    - Provided technical support at N1, N2, and N3 levels and documented internal processes, efficiently mapping and resolving user incidents.
-    - Fixed bugs and implemented features in the front-end (Vue, CSS) and back-end (APIs with TypeScript and business logic) across multiple applications and repositories.
-    - Analyzed MongoDB schemas and indexes, leading to optimized loading times and performance enhancements.
-    - Implemented features
+    - Built a direct-mail (bulk-messaging) feature for the Communications product that parses uploaded spreadsheets and dispatches notifications, engineered with Bull job queues and Redis to process sends asynchronously and reliably at the platform's scale of 1,800+ schools and 3M+ students.
+    - Independently drove the re-architecture of the Layers AI assistant from a hidden drawer into an inline, action-based system with streaming responses, owning the design and implementation with only a later tech-lead review; built a model-agnostic action registry (revise / expand / shorten) on the AI SDK with rate-limiting and error handling, doubling daily AI-assisted output from ~100 to ~400 posts per day.
+    - Designed and shipped an event-recurrence engine for the Calendar product based on the iCalendar RRULE standard (RFC 5545), enabling complex repeating schedules consistent with industry conventions.
+    - Contributed to an end-to-end migration of a legacy micro-frontend across the Vue front-end and TypeScript back-end, from design through deployment.
+    - Worked across two Node.js back-ends (Payments and Core), modifying API routes and integrating their services to surface Core member data inside the Payments product.
+    - Instrumented key features with PostHog for usage analytics and built Metabase dashboards to validate decisions with data before building, directly informing the direct-mail and AI-assistant features.
+    - Empowered N1/N2 support teams by building internal tools on the Openblocks (Lowcoder) low-code platform, and wired DevRev and Discord integrations via Windmill to improve issue visibility.
+    - Optimized MongoDB schemas and indexes to cut load times, and resolved N1–N3 production incidents while documenting internal processes, improving reliability across multiple applications.
   ],
 )
-
 #exp(
   title: "Summer Software Engineering Intern",
   organization: "Layers Education",
   date: "Dec 2024 - Feb 2025",
   location: "São Caetano, SP, Brazil",
   details: [
-    - Modernized the documentation platform by migrating from Stencil to Vitepress using Vue and TypeScript.
-    - Developed and configured CI/CD pipelines in GitLab, automating site deployment.
-    - Integrated Decap CMS, streamlining update workflows and content management.
-    - Refined the documentation layout, enhancing visual consistency and usability.
-    - Created a hands-on tutorial for sending notifications via the Layers API with real code examples.
+    - Modernized the documentation platform by migrating it from Stencil to VitePress (Vue, TypeScript).
+    - Built and configured CI/CD pipelines in GitLab, automating site deployment.
+    - Integrated Decap CMS, streamlining content management and update workflows.
+    - Authored a hands-on tutorial for sending notifications through the Layers API with working code examples.
   ],
 )
 
@@ -98,9 +103,9 @@
   (
     "Programming Languages",
     (
-      [Python],
       [TypeScript],
       [JavaScript],
+      [Python],
       [Bash],
       [C],
     ),
@@ -109,8 +114,19 @@
     "Web & Frameworks",
     (
       [Vue],
+      [Nuxt],
+      [React],
+      [Next],
       [Node.js],
       [HTML/CSS],
+    ),
+  ),
+  (
+    "Databases",
+    (
+      [MongoDB],
+      [Redis],
+      [PostgreSQL],
     ),
   ),
   (
@@ -118,6 +134,7 @@
     (
       [Docker],
       [CI/CD],
+      [GitLab],
       [Linux],
     ),
   ),
@@ -127,7 +144,17 @@
       [Git],
       [Jira],
       [DevRev],
-      [Wireshark],
+      [Github],
+      [Gitlab],
+    ),
+  ),
+  (
+    "Analytics & Automation",
+    (
+      [PostHog],
+      [Metabase],
+      [Windmill],
+      [Openblocks/Lowcoder],
     ),
   ),
 ))
